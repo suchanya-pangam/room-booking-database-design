@@ -1,0 +1,21 @@
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+
+# Local databases and backups
+*.db
+*.sqlite
+*.sqlite3
+*.sql.gz
+*.dump
+*.backup
+
+# Editor and operating-system files
+.DS_Store
+.idea/
+.vscode/
+
+# Generated exports
+exports/
+tmp/
