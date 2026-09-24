@@ -8,8 +8,8 @@ This repository documents the database-design contribution to an in-progress sys
 
 - [`docs/room-booking-erd.drawio`](docs/room-booking-erd.drawio) — editable entity-relationship diagram (ERD)
 - [`docs/erd/`](docs/erd/) — PNG previews of all 10 ERD pages for quick viewing on GitHub
-- [`docs/data-dictionary.md`](docs/data-dictionary.md) — purpose and relationships of the 21 tables
-- [`sql/schema.sql`](sql/schema.sql) — PostgreSQL DDL inferred from the ERD
+- [`docs/data-dictionary.md`](docs/data-dictionary.md) — earlier design reference; pending alignment with the current application model
+- [`sql/schema.sql`](sql/schema.sql) — earlier PostgreSQL design reference; pending alignment with the current application model
 
 ## ERD previews
 
@@ -28,7 +28,7 @@ Open a page below to view its tables and relationships without a draw.io editor:
 
 ## Design overview
 
-The schema uses UUID primary keys, foreign-key constraints, timestamps, and JSONB fields where flexible structured data is useful. It supports Gmail login, bookings from Monday through Friday between 08:30 and 16:30 with a three-business-day notice rule, a central `ds_calendar` integration, and optional Google Form issue reports.
+The ERD reflects the current data model in `datasciroombooking/src/lib/types.ts`: 18 planned tables for the in-memory prototype, including users, locations, bookable units, bookings, equipment, issues, approvals, audit logs, and notifications. Embedded arrays are labelled as JSON/embedded fields.
 
 ## Use
 
